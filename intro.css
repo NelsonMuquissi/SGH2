@@ -1,0 +1,93 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    /*transition: all .2s linear;*/
+
+}
+
+body {
+    background-color: #eee;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+}
+header {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url("imagem/Relogio.jpg") no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    display: flex;
+}
+
+main{
+    margin-left: 15%;
+    background-color: #fff7;
+    width: 70%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 .4rem .8rem #0005;
+    display: block;
+}
+
+.tete{
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display:flex;
+}
+
+.card{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    color: azure;
+    cursor: pointer;
+    
+}
+.card:hover .face.front{
+    transform: perspective(500px) rotateY(180deg);
+}
+.card:hover .face.back{
+    transform: perspective(500px) rotateY(360deg);
+}
+.card .face{
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: 1s ease-in-out;
+    transform: perspective(500px) rotateY(0deg);
+}
+.card .face.front{
+    background: #978ceb;
+}
+.card .face.back{
+    background: #0b024a;
+    color: #fff;
+    transform: perspective(500px) rotateY(180deg);
+}
